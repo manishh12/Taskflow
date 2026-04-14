@@ -93,3 +93,4 @@ All errors return JSON:
 - Add integration tests for auth + task update/delete flows.
 - Improve permission model (explicit project membership, roles).
 - Add drag-and-drop task status board and dark mode.
+
