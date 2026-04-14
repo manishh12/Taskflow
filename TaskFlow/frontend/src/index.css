@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: 210 20% 99%;
+    --surface-muted: 210 18% 96%;
+    --surface-elevated: 0 0% 100%;
+    --border: 214 16% 88%;
+    --fg: 222 32% 14%;
+    --fg-muted: 220 12% 38%;
+    --fg-subtle: 220 10% 52%;
+    --accent: 238 72% 54%;
+    --accent-fg: 0 0% 100%;
+    --danger: 0 72% 50%;
+    --danger-fg: 0 0% 100%;
+  }
+
+  .dark {
+    --surface: 222 20% 10%;
+    --surface-muted: 222 18% 13%;
+    --surface-elevated: 222 18% 16%;
+    --border: 222 16% 24%;
+    --fg: 210 25% 96%;
+    --fg-muted: 216 12% 72%;
+    --fg-subtle: 216 10% 62%;
+    --accent: 238 82% 66%;
+    --accent-fg: 222 20% 10%;
+    --danger: 0 75% 62%;
+    --danger-fg: 222 20% 10%;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-surface-muted text-fg antialiased;
+    min-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+/* Focus ring for accessibility */
+@layer components {
+  .tf-focus {
+    @apply outline-none ring-2 ring-accent/30 ring-offset-2 ring-offset-surface-muted;
+  }
+}

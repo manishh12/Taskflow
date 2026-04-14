@@ -1,0 +1,20 @@
+.DS_Store
+
+# local Go module cache (do not commit)
+.gomodcache/
+
+# env
+.env
+
+# backend
+backend/bin/
+backend/tmp/
+backend/.air.toml
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+frontend/.env.local
+frontend/.env.*.local
+
